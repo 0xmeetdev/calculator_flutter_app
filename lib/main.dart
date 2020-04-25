@@ -1,3 +1,4 @@
+import 'package:devilcal/splash.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -6,8 +7,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: HomeScreen(),
+      home: SplashScreen(),
       debugShowCheckedModeBanner: false,
+      routes: {
+        '/home': (context) => HomeScreen(),
+      },
     );
   }
 }
@@ -118,12 +122,19 @@ class _HomeScreen extends State<HomeScreen> {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {},
+        ),
         backgroundColor: Colors.black,
         title: Text(
           "Binary Pad",
           style:
               TextStyle(fontFamily: "ComicNeue", fontWeight: FontWeight.w700),
         ),
+        actions: <Widget>[
+          IconButton(icon: Icon(Icons.feedback), onPressed: () {})
+        ],
         centerTitle: true,
       ),
       body: Container(

@@ -123,7 +123,10 @@ class _HomeScreen extends State<HomeScreen> {
       backgroundColor: Colors.black,
       appBar: AppBar(
         leading: IconButton(
-          icon: Icon(Icons.arrow_back),
+          icon: Icon(
+            Icons.arrow_back,
+            color: Colors.black,
+          ),
           onPressed: () {},
         ),
         backgroundColor: Colors.black,
@@ -133,7 +136,12 @@ class _HomeScreen extends State<HomeScreen> {
               TextStyle(fontFamily: "ComicNeue", fontWeight: FontWeight.w700),
         ),
         actions: <Widget>[
-          IconButton(icon: Icon(Icons.feedback), onPressed: () {})
+          IconButton(
+              icon: Icon(
+                Icons.feedback,
+                color: Colors.black,
+              ),
+              onPressed: () {})
         ],
         centerTitle: true,
       ),
